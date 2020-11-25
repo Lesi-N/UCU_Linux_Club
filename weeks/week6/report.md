@@ -12,85 +12,91 @@
 
 ### Problem 1: Floating point numbers
 ```
-insert your pattern here
+(\d)\.\d+
 ```
 ### Problem 2: Years before 1990
 ```
-insert your pattern here
+.+.19[1-8][0-9].
 ```
 ### Problem 3: Hexadecimal colors
 ```
-insert your pattern here
+#(\w|\d){6}
 ```
 ### Problem 4: Grayscale colors
 ```
-insert your pattern here
+#([a-z0-9]{2}|[A-Z0-9])\1{2,}
 ```
 ### Problem 5: Too long lines
 ```
-insert your pattern here
+.{30,}
 ```
 ### Problem 6: Remove repeating words
 ```
-insert your pattern here
+(\s[\w-']+)\1
+$1
 ```
 ### Problem 7: Match HTML tags
 ```
-insert your pattern here
+<[!/]?\w+\s?(\w+)?>
 ```
 ### Problem 8: Cut numbers two digits after floating point
 ```
-insert your pattern here
+(\d\.\d{2})\d+
+$1
 ```
 ### Problem 9: Digit commas formatting
 ```
-insert your pattern here
+(\d)(?=(\d{3})+\b)
+$1,
 ```
 ### Problem 10: Match lowercase function declarations
 ```
-insert your pattern here
+function(?=\s[a-z])\s\w+.\w?.
 ```
 ### Problem 11: Change date formats
 ```
-insert your pattern here
+(\d{4})-(\d{2})-(\d{2})
+$3.$2.$1
 ```
 ### Problem 12: Validate 24h time format
 ```
-insert your pattern here
+\b([0-1]\d|2[0-3]):[0-5]\d
 ```
 ### Problem 13: Validate AM/PM time format
 ```
-insert your pattern here
+\b(0?\d|1[0-2]):[0-5]\d [AP]M
 ```
 ### Problem 14: Pascal style to C-style parameters
 ```
-insert your pattern here
+(?<=[\s][a-z]);
 ```
 ### Problem 15: Change variable initialization
 ```
-insert your pattern here
+var\s+(\w+)\s+=\s+new\s+((\w|<|>)+)(.+)
+$2 $1$3
 ```
 ### Problem 16: IPv6 adresses
 ```
-insert your pattern here
+\d{4}:[a-z0-9]{3,4}(:([\d\w]?){4}){4,6}
 ```
 ### Problem 17: Validate 32 or 24 bit hexadecimal colors
 ```
-insert your pattern here
+#(([a-f\d]{6})|([a-f\d]{8}))\b
 ```
 ### Problem 18: Replace operators with function calls
 ```
-insert your pattern here
+(((\w+)[\.(]\w[)*](\w\d\.\w)?)|(\w\d))\s\+\s(((\w+)[\.(]\w[)*](\w\d\.\w)?)|(\w\d))
+Add($1, $6)
 ```
 ### Problem 19: Extract query string from URL
 ```
-insert your pattern here
+\?(\w+=.+)
 ```
 ### Problem 20: Extract host from URL
 ```
-insert your pattern here
+\b\w{4}://(www\.)?\w+\.com
 ```
 ### Problem 21: Strings not containing word
 ```
-insert your pattern here
+^(.(?!chocolate))*$
 ```
